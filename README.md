@@ -1,6 +1,6 @@
 # pandas-data-transormations
 
-## GROUPBY + apply different aggregations
+#### GROUPBY + apply different aggregations
 ```python
 df_result.groupby(["SAP_code", "Concurrent_code", "Concurrent_nom"]).agg(
     most_common_price=('Prix_Num', lambda x: x.value_counts().index[0]),
@@ -8,3 +8,4 @@ df_result.groupby(["SAP_code", "Concurrent_code", "Concurrent_nom"]).agg(
     std=('Prix_Num', 'std'),
 )
 ```
+#### Pivot
