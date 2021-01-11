@@ -7,5 +7,6 @@ df_result.groupby(["SAP_code", "Concurrent_code", "Concurrent_nom"]).agg(
     avg=('Prix_Num', 'mean'),
     std=('Prix_Num', 'std'),
 )
+df_grouped= df_grouped.reset_index()
 ```
 #### Pivot
