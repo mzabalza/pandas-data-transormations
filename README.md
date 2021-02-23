@@ -9,4 +9,9 @@ df_result.groupby(["SAP_code", "Concurrent_code", "Concurrent_nom"]).agg(
 )
 df_grouped= df_grouped.reset_index()
 ```
+
+#### Preserve shape after groupby
+```python
+df['avg_price'] = df.groupby(['col1', 'col2', 'col3', 'col4'])['price'].transform('mean')
+```
 #### Pivot
