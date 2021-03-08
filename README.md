@@ -15,6 +15,11 @@ df_grouped= df_grouped.reset_index()
 df['avg_price'] = df.groupby(['col1', 'col2', 'col3', 'col4'])['price'].transform('mean')
 ```
 
+```python
+new = df.groupby(["column1", "column2"])["column3"].apply(lambda x: len(x.unique())).rename("nunique").reset_index()
+df_1 = df.merge(new, on=["column1", "column2"], how='left')
+```
+
 #### Apply multiple condition over different columns
 ```python
 def func(row):
